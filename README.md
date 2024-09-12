@@ -85,7 +85,3 @@ The following Python libraries are required to run this application:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-### Notes:
-- Replace `"yuki0702p"` in the `git clone` command with your actual GitHub username or repository path.
-- Add an appropriate screenshot of the application to the `Screenshots` section and update the path in the README file.
