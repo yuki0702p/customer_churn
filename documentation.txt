@@ -1,0 +1,46 @@
+# Deploying the Churn Prediction Streamlit App
+## Prerequisites
+1. Git installed on your local machine
+2. Heroku account (sign up at https://signup.heroku.com/)
+3. Heroku CLI installed (https://devcenter.heroku.com/articles/heroku-cli)
+
+## Step 1: Prepare Your Project
+1. Create a new directory for your project and navigate to it:
+   ```
+   mkdir churn-prediction-app
+   cd churn-prediction-app
+   ```
+2. Copy the Streamlit app code into a file named `app.py`.
+3. Create a `Procfile` (no file extension) with the following content:
+   ```
+   web: streamlit run app.py --server.port $PORT
+   ```
+4. Copy your trained model file (`finalized_model.sav`) into the project directory.
+
+## Step 2: Deploy to Heroku
+1. Log in to Heroku:
+   ```
+   heroku login
+   ```
+2. Create a new Heroku app:
+   ```
+   heroku create churn-prediction-app
+   ```
+3. Push your code to Heroku:
+   ```
+   git push heroku master
+   ```
+4. Open your app in the browser:
+   ```
+   heroku open
+   ```
+## Step 4: Troubleshooting
+
+If you encounter any issues:
+
+1. Check the Heroku logs:
+   ```
+   heroku logs --tail
+   ```
+
+Ensure that the `Procfile` is correctly configured.
